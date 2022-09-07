@@ -1,0 +1,10 @@
+<button (click)="requestData()">Get games!</button>
+<button (click)="postData()">Post games!</button>
+
+{{response | json}}
+<div *ngIf="get">
+{{response.results[0].id}}
+<img [src]="response.results[0].background_image" width="200px">
+</div>
+
+{{message}}
